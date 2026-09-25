@@ -1,0 +1,27 @@
+:root {
+    /* Renkler */
+    --color-bg: #0a0a12;
+    --color-surface: #14121f;
+    --color-accent-violet: #7c5cff;
+    --color-accent-cyan: #34e2e2;
+    --color-text: #ffffff;
+    --color-text-muted: #9b96b3;
+    --color-text-dim: #6b6684;
+    --color-border: #24203a;
+
+    /* Fontlar */
+    --font-display: 'Orbitron', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Köşe Yuvarlatma */
+    --radius-sm: 8px;
+    --radius-pill: 999px;
+    --radius-md: 16px;
+
+    /* Boşluklar */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 40px;
+    --spacing-xl: 64px;
+}

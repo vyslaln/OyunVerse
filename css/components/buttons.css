@@ -1,0 +1,13 @@
+.cta-btn{
+    display: inline-block;
+    background-color: var(--color-accent-violet);
+    color: var(--color-text);
+    border-radius: var(--radius-sm);
+    padding: 10px 22px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.cta-btn:hover{
+    filter: brightness(1.1);
+}

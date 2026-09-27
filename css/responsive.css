@@ -2,6 +2,27 @@
    TABLET (max-width: 1024px)
    ========================================================== */
 @media (max-width: 1024px){
+    /* --- Navbar bu genislikte sikisiyor, "Ana Sayfa" ve
+       "Giris Yap" alt satira kayiyordu --- */
+    #header{
+        padding-inline: 24px;
+    }
+
+    .nav-list{
+        gap: 18px;
+    }
+
+    .nav-list a{
+        white-space: nowrap;
+        font-size: 13px;
+    }
+
+    .btn-signin{
+        white-space: nowrap;
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
     .hero-top img{
         width: 360px;
     }
@@ -50,7 +71,24 @@
    ========================================================== */
 @media (max-width: 768px){
 
-    /* --- Navbar / Hamburger Menu --- */
+    /* --- Header genel --- */
+    #header{
+        padding-inline: 16px;
+        gap: 8px;
+    }
+
+    /* Logo - SVG'nin kendi orjinal boyutu 360x60, kucultmezsek
+       tek basina mobil ekranin cogunu kaplıyor */
+    #header > a{
+        flex-shrink: 0;
+    }
+
+    #header > a img{
+        width: 130px;
+        height: auto;
+    }
+
+    /* --- Hamburger Menu --- */
     .menu-toggle{
         display: flex;
         flex-direction: column;
@@ -60,10 +98,13 @@
         border: none;
         cursor: pointer;
         z-index: 1001;
+        flex-shrink: 0;
+        order: -1;
+        padding: 8px;
     }
 
     .menu-toggle span{
-        width: 24px;
+        width: 22px;
         height: 2px;
         background-color: var(--color-text);
         border-radius: 2px;
@@ -71,7 +112,7 @@
 
     #navbar{
         position: fixed;
-        inset: 88px 0 0 0;
+        inset: 72px 0 0 0;
         background-color: var(--color-bg);
         border-top: 1px solid var(--color-border);
         transform: translateY(-10px);
@@ -81,7 +122,6 @@
         z-index: 1000;
     }
 
-    .nav-list.active ~ #navbar,
     #navbar:has(.nav-list.active){
         opacity: 1;
         transform: translateY(0);
@@ -92,7 +132,7 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 0;
-        padding: var(--spacing-lg) 40px;
+        padding: var(--spacing-lg) 20px;
         display: none;
     }
 
@@ -107,16 +147,30 @@
 
     .nav-list a{
         display: block;
-        padding: 16px 0;
+        padding: 14px 0;
+        white-space: normal;
+        font-size: 14px;
     }
 
+    /* --- Sag taraftaki ikon grubu --- */
     .navbar-actions{
-        gap: 6px;
+        gap: 4px;
+        flex-shrink: 0;
+    }
+
+    .navbar-actions .icon-btn{
+        padding: 4px;
+    }
+
+    .navbar-actions .icon-btn svg{
+        width: 18px;
+        height: 18px;
     }
 
     .btn-signin{
-        padding: 8px 14px;
-        font-size: 12px;
+        padding: 7px 12px;
+        font-size: 11px;
+        white-space: nowrap;
     }
 
     /* --- Hero --- */
@@ -151,6 +205,20 @@
         max-width: 400px;
     }
 
+    /* --- Haberler carousel --- */
+    .news-tabs{
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .news-card-track{
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
     /* --- Grid bazli tum sayfalar tek sutuna dusuyor --- */
     .featured-games-grid,
     .product-grid,
@@ -161,8 +229,6 @@
         grid-template-columns: 1fr;
     }
 
-    /* --- Haberler sekmeleri --- */
-    .news-tabs,
     .shop-tabs{
         flex-wrap: wrap;
         gap: 8px;
@@ -214,6 +280,10 @@
    KUCUK MOBIL (max-width: 480px)
    ========================================================== */
 @media (max-width: 480px){
+    #header > a img{
+        width: 110px;
+    }
+
     .hero-title{
         font-size: 1.75rem;
     }
@@ -230,5 +300,19 @@
 
     .search-overlay-box{
         width: 92%;
+    }
+
+    /* --- Haberler carousel: ok butonlarini gizle,
+       karti ekrana gore kucult, parmakla kaydirilabilir yap --- */
+    .news-card{
+        width: 85vw;
+        max-width: 280px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+
+    .news-panel .left-arrow,
+    .news-panel .right-arrow{
+        display: none;
     }
 }

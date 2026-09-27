@@ -1,0 +1,162 @@
+.back-link{
+    display: inline-block;
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.back-link:hover{
+    color: var(--color-accent-cyan);
+}
+
+.account-page{
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-top: var(--spacing-xl);
+    padding-inline: 40px;
+    padding-bottom: var(--spacing-xl);
+}
+
+.account-header{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    background-color: var(--color-surface);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.account-avatar{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: var(--color-accent-violet);
+    color: var(--color-text);
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.account-name{
+    font-family: var(--font-display);
+    color: var(--color-text);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.account-email{
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    margin-top: 2px;
+}
+
+.account-header-actions{
+    margin-left: auto;
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: center;
+}
+
+.btn-outline{
+    background: none;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-outline:hover{
+    color: var(--color-text);
+    border-color: var(--color-accent-cyan);
+}
+
+.account-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.account-card{
+    background-color: var(--color-surface);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+}
+
+.account-card-wide{
+    grid-column: 1 / -1;
+}
+
+.account-card h3{
+    font-family: var(--font-display);
+    color: var(--color-text);
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+}
+
+.account-empty{
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.account-plan-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.account-plan-name{
+    font-family: var(--font-display);
+    color: var(--color-text);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.account-plan-meta{
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+}
+
+.account-list{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.account-list-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--spacing-sm);
+    font-size: 0.875rem;
+}
+
+.account-list-item:last-child{
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.account-list-item-title{
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.account-list-item-meta{
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+}
+
+.account-list-item-value{
+    color: var(--color-accent-cyan);
+    font-weight: 700;
+}

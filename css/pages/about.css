@@ -1,0 +1,127 @@
+.about-hero{
+    max-width: 900px;
+    margin-inline: auto;
+    margin-top: var(--spacing-xl);
+    padding-inline: 40px;
+    text-align: center;
+}
+
+.about-hero-title{
+    font-family: var(--font-display);
+    color: var(--color-text);
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+.about-hero-text{
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+    margin-top: var(--spacing-sm);
+    line-height: 1.6;
+}
+
+.about-story{
+    max-width: 1400px;
+    margin-inline: auto;
+    margin-top: var(--spacing-xl);
+    padding-inline: 40px;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.about-story-media{ flex: 1; }
+
+.about-story-media img{
+    width: 100%;
+    border-radius: var(--radius-md);
+    object-fit: cover;
+}
+
+.about-story-text{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.about-story-text h2{
+    font-family: var(--font-display);
+    color: var(--color-text);
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.about-story-text p{
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.about-values{
+    max-width: 1400px;
+    margin-inline: auto;
+    margin-top: var(--spacing-xl);
+    padding-inline: 40px;
+    text-align: center;
+}
+
+.about-values-title{
+    font-family: var(--font-display);
+    color: var(--color-text);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-lg);
+}
+
+.about-values-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.value-card{
+    background-color: var(--color-surface);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    text-align: left;
+}
+
+.value-card i{ color: var(--color-accent-cyan); font-size: 1.75rem; }
+
+.value-card h3{
+    color: var(--color-text);
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-top: var(--spacing-sm);
+}
+
+.value-card p{
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    margin-top: var(--spacing-xs);
+    line-height: 1.6;
+}
+
+.about-cta{
+    max-width: 900px;
+    margin-inline: auto;
+    margin-top: var(--spacing-xl);
+    padding-inline: 40px;
+    padding-bottom: var(--spacing-xl);
+    text-align: center;
+}
+
+.about-cta h2{
+    font-family: var(--font-display);
+    color: var(--color-text);
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.about-cta p{
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    margin-top: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+}

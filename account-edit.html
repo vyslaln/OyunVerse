@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Oyunverse Mağaza — klavye, mouse, kulaklık, controller ve mouse pad gibi oyuncu ekipmanlarını keşfet.">
-    <meta name="keywords" content="oyuncu ekipmanları, gaming gear, klavye, mouse, kulaklık, controller, mouse pad">
+    <meta name="description" content="Oyunverse Hesabı Düzenle — ad, e-posta ve şifreni güncelle.">
+    <meta name="keywords" content="oyunverse, hesap düzenle, profil düzenle">
     <meta name="author" content="Senin adın">
-    <meta name="robots" content="index,follow">
+    <meta name="robots" content="noindex,nofollow">
 
-    <meta property="og:title" content="Mağaza | OyunVerse">
-    <meta property="og:description" content="Oyuncu ekipmanlarını keşfet: klavye, mouse, kulaklık, controller, mouse pad.">
+    <meta property="og:title" content="Hesabı Düzenle | OyunVerse">
+    <meta property="og:description" content="Hesap bilgilerini güncelle.">
     <meta property="og:image" content="assets/icons/header.jpg">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="tr_TR">
 
     <meta name="theme-color" content="#0a0a12">
 
-    <link rel="canonical" href="shop.html">
+    <link rel="canonical" href="account-edit.html">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,12 +33,13 @@
     <link rel="stylesheet" href="css/components/navbar.css">
     <link rel="stylesheet" href="css/components/buttons.css">
     <link rel="stylesheet" href="css/components/footer.css">
-    <link rel="stylesheet" href="css/components/product-card.css">
+    <link rel="stylesheet" href="css/components/payment-form.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/pages/shop.css">
+    <link rel="stylesheet" href="css/pages/auth.css">
+    <link rel="stylesheet" href="css/pages/account.css">
     <link rel="stylesheet" href="css/responsive.css">
 
-    <title>Mağaza | Oyunverse</title>
+    <title>Hesabı Düzenle | Oyunverse</title>
 </head>
 <body>
     <header id="header">
@@ -57,7 +58,7 @@
                 <li><a href="index.html">Ana Sayfa</a></li>
                 <li><a href="tournaments.html">Turnuvalar</a></li>
                 <li><a href="news.html">Haberler</a></li>
-                <li><a href="shop.html" class="active">Mağaza</a></li>
+                <li><a href="shop.html">Mağaza</a></li>
                 <li><a href="plans.html">Planlar</a></li>
             </ul>
         </nav>
@@ -78,43 +79,36 @@
                 </svg>
             </a>
 
-            <button class="btn-signin">Giriş Yap</button>
+            <a href="account.html" class="btn-signin">Hesabım</a>
         </div>
     </header>
 
     <main id="main" class="main">
-        <section class="shop-page">
-            <h1 class="shop-page-title">Mağaza</h1>
-            <p class="shop-page-subtitle">Performansını yükseltecek oyuncu ekipmanlarını keşfet.</p>
+        <section class="auth-page">
+            <a href="account.html" class="back-link">&larr; Hesabıma Dön</a>
 
-            <div class="shop-tabs">
-                <button class="shop-tab-btn active" data-filter="tumu">Tümü</button>
-                <button class="shop-tab-btn" data-filter="klavye">Klavye</button>
-                <button class="shop-tab-btn" data-filter="mouse">Mouse</button>
-                <button class="shop-tab-btn" data-filter="kulaklik">Kulaklık</button>
-                <button class="shop-tab-btn" data-filter="controller">Controller</button>
-                <button class="shop-tab-btn" data-filter="mousepad">Mousepad</button>
+            <div class="auth-box">
+                <h1 class="auth-title">Hesabı Düzenle</h1>
+                <p class="auth-subtitle">Bilgilerini güncel tut.</p>
+
+                <form class="payment-form" id="account-edit-form">
+                    <label for="edit-fullname">Ad Soyad</label>
+                    <input type="text" id="edit-fullname" required>
+
+                    <label for="edit-email">E-posta</label>
+                    <input type="email" id="edit-email" required>
+
+                    <label for="edit-password">Yeni Şifre <span class="optional-label">(değiştirmek istemiyorsan boş bırak)</span></label>
+                    <input type="password" id="edit-password" minlength="6">
+
+                    <label for="edit-password-confirm">Yeni Şifre Tekrar</label>
+                    <input type="password" id="edit-password-confirm" minlength="6">
+
+                    <button type="submit" class="cta-btn">Değişiklikleri Kaydet</button>
+                    <p class="auth-error" id="edit-error"></p>
+                    <p class="payment-success" id="edit-success">Bilgilerin güncellendi!</p>
+                </form>
             </div>
-
-            <template id="product-card-template">
-                <div class="product-card">
-                    <div class="product-image-wrap">
-                        <a href="">
-                            <img src="" alt="">
-                        </a>
-                        <span class="product-badge"></span>
-                    </div>
-                    <span class="product-category-tag"></span>
-                    <h3 class="product-name"></h3>
-                    <div class="product-price-row">
-                        <span class="product-price"></span>
-                        <span class="product-old-price"></span>
-                    </div>
-                    <button class="cta-btn product-add-btn">Sepete Ekle</button>
-                </div>
-            </template>
-
-            <div class="product-grid" id="product-grid"></div>
         </section>
     </main>
 
@@ -158,7 +152,6 @@
     </footer>
 
     <script src="js/core/main.js"></script>
-    <script src="js/data/productsData.js"></script>
-    <script src="js/pages/shop.js"></script>
+    <script src="js/pages/account-edit.js"></script>
 </body>
 </html>

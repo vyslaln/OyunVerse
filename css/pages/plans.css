@@ -1,0 +1,62 @@
+.plans-page{
+    max-width: 1400px;
+    margin-inline: auto;
+    margin-top: var(--spacing-xl);
+    padding-inline-start: 40px;
+    padding-inline-end: 15px;
+    text-align: center;
+}
+
+.plans-page-title{
+    font-family: var(--font-display);
+    color: var(--color-text);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.plans-page-subtitle{
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    margin-top: var(--spacing-xs);
+    margin-bottom: var(--spacing-lg);
+}
+
+.billing-toggle{
+    display: inline-flex;
+    gap: 8px;
+    background-color: var(--color-surface);
+    padding: 6px;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.billing-btn{
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 18px;
+    border-radius: var(--radius-sm);
+}
+
+.billing-btn.active{
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+
+.billing-save{
+    color: var(--color-accent-cyan);
+    font-size: 0.7rem;
+    margin-left: 4px;
+}
+
+.plans-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    text-align: left;
+    padding-bottom: var(--spacing-xl);
+}

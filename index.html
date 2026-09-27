@@ -145,10 +145,83 @@
                 </div>
             </div>
         </section>
+
+        <!-- Haberler -->
+        <section id="news-section" class="news-section">
+
+            <div class="news-tabs">
+                <button class="news-btn active" id="tournament-news-btn" data-tab="turnuva">
+                    Turnuva Haberleri
+                </button>
+
+                <button class="news-btn" id="game-news-btn" data-tab="oyun">
+                    Oyun Haberleri
+                </button>
+
+                <button class="news-btn" id="campain-news-btn" data-tab="kampanya">
+                    Kampanya
+                </button>
+            </div>
+
+            <div class="news-panels">
+                <template id="news-card-template">
+                        <div class="news-card">
+                            <a href=""><img src="" alt=""></a>
+                            <span class="badge-title"></span>
+                            <h3></h3>
+                            <p></p>
+                            <span class="date"></span>
+                        </div>
+                    </template> 
+                <div class="news-panel active" data-panel="turnuva">
+                    <button class="left-arrow">
+                        ←
+                    </button>
+
+                    <div class="news-card-track">
+
+                    </div>
+
+                    <button class="right-arrow">
+                        →
+                    </button>
+                </div>
+
+                <div class="news-panel" data-panel="oyun">
+                    <button class="left-arrow">
+                        ←
+                    </button>
+                    
+                    <div class="news-card-track">
+
+                    </div>
+
+                    <button class="right-arrow">
+                        →
+                    </button>
+                </div>
+
+                <div class="news-panel" data-panel="kampanya">
+                    <button class="left-arrow">
+                        ←
+                    </button>
+                    
+                    <div class="news-card-track">
+
+                    </div>
+
+                    <button class="right-arrow">
+                        →
+                    </button>
+                </div>
+            </div>
+        </section>
     </main>
 
 
-
+    <!-- Harici (external) js dosyaları  -->
     <script src="js/core/main.js"></script>
+    <script src="js/data/newsData.js"></script>
+    <script src="js/pages/home.js"></script>
 </body>
 </html>

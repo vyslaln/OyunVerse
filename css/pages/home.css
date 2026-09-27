@@ -70,3 +70,120 @@
     height: 220px;
     object-fit: cover;
 }
+
+/* haberler */
+.news-section{
+    margin-top: var(--spacing-xl);
+    color: var(--color-accent-violet);
+    max-width: 1600px;
+    margin-inline: auto;
+    padding-inline-start: 40px;
+    padding-inline-end: 15px;
+}
+
+.news-panel{
+    display: none;
+}
+
+.news-panel.active{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.news-panels{
+    margin-top: 1.5625rem;
+}
+
+.news-card-track{
+    display: flex;
+    gap: var(--spacing-sm);
+    overflow-x:auto ;
+    overflow-y: hidden;
+}
+
+.news-card{
+    flex-shrink: 0;
+    max-width: 260px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-surface);
+    padding: 0.75rem;
+    border-radius: var(--radius-md);
+    gap: var(--spacing-sm);
+}
+
+.news-card img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    gap: var(--spacing-sm);
+}
+
+.badge-title{
+    color: var(--color-accent-violet);
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.news-card h3{
+    color: var(--color-text);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.news-card p{
+    color:var(--color-text-muted);
+    font-size: 0.675rem;
+    line-height: 1.5;
+}
+
+.date{
+    color: var(--color-text-muted);
+    font-size: 0.600rem;
+}
+
+.news-btn{
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-text-muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.news-btn.active{
+    color: var(--color-text);
+}
+
+.news-btn:hover{
+    color: var(--color-accent-cyan);
+}
+
+.news-tabs{
+    display: flex;
+    gap: 36px;
+    justify-content: center;
+}
+
+/* sol ve sağ oklar */
+.left-arrow,
+.right-arrow{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text);
+    font-size: 1.5rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    padding: 0 10px;
+}
+
+.left-arrow:hover,
+.right-arrow:hover{
+    color: var(--color-accent-cyan);
+}

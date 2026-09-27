@@ -102,26 +102,66 @@ Ardından `index.html`'i bir local server üzerinden aç (tarayıcı güvenlik p
 - veya `python -m http.server` gibi basit bir local server
 
 ## Proje Yapısı
+
+```
 OyunVerse/
-├── index.html, tournaments.html, tournament-detail.html
-├── news.html, news-detail.html
-├── shop.html, product-detail.html, cart.html, checkout.html
-├── plans.html, plan-checkout.html
-├── about.html, contact.html
-├── login.html, register.html, account.html, account-edit.html
-├── dashboard.html, search.html
-├── docs/
-│ └── demo.mp4
-├── assets/icons/
-├── css/
-│ ├── base/ (_reset.css, _variables.css)
-│ ├── layout/ (layout.css)
-│ ├── components/ (navbar, buttons, footer, kart bileşenleri...)
-│ └── pages/ (her sayfaya özel stiller)
-└── js/
-├── core/main.js (ortak: navbar giriş durumu, arama, hamburger menü)
-├── data/ (statik veri dizileri)
-└── pages/ (her sayfaya özel mantık)
+  index.html
+  tournaments.html
+  tournament-detail.html
+  news.html
+  news-detail.html
+  shop.html
+  product-detail.html
+  cart.html
+  checkout.html
+  plans.html
+  plan-checkout.html
+  about.html
+  contact.html
+  login.html
+  register.html
+  account.html
+  account-edit.html
+  dashboard.html
+  search.html
+
+  docs/
+    demo.mp4
+
+  assets/
+    icons/
+
+  css/
+    base/
+      _reset.css
+      _variables.css
+    layout/
+      layout.css
+    components/
+      navbar.css
+      buttons.css
+      footer.css
+      news-card.css
+      product-card.css
+      tournament-card.css
+      plan-card.css
+      payment-form.css
+    pages/
+      (her sayfaya ozel stil dosyalari)
+    style.css
+    responsive.css
+
+  js/
+    core/
+      main.js
+    data/
+      tournamentsData.js
+      newsData.js
+      productsData.js
+      plansData.js
+    pages/
+      (her sayfaya ozel js dosyalari)
+```
 
 ## Veri Modeli (localStorage)
 | Anahtar | İçerik |
@@ -224,7 +264,7 @@ Then open `index.html` through a local server (recommended over double-clicking 
 - or a simple local server such as `python -m http.server`
 
 ## Project Structure
-*(identical to the Turkish section above — see [Project Structure](#proje-yapısı))*
+*(identical to the Turkish section above — see [Proje Yapısı](#proje-yapısı))*
 
 ## Data Model (localStorage)
 | Key | Contents |
@@ -256,5 +296,3 @@ This project was built for educational/learning purposes. Choose a license that 
 ## Contact
 **Author:** Veysel Alan
 **Email:** aveysel836@gmail.com
-
-</div>

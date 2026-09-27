@@ -24,7 +24,7 @@ A demo esports & gaming platform — tournaments, gaming news, an equipment shop
 
 <div align="center">
 
-<video src="https://github.com/user-attachments/assets/36bf675a-3107-4f41-bd22-75cb47ef95b5" controls muted width="800"></video>
+<video src="https://github.com/user-attachments/assets/95e2c6ca-9d91-402e-9936-01c011bf34a7" controls muted width="800"></video>
 
 </div>
 

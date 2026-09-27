@@ -3,12 +3,12 @@ const tournament = document.querySelector('[data-panel="turnuva"] .news-card-tra
 const games = document.querySelector('[data-panel="oyun"] .news-card-track');
 const campaign = document.querySelector('[data-panel="kampanya"] .news-card-track');
 
-function renderNews(newsArray, trackElement,tagLabel){
+function renderNews(newsArray, trackElement, tagLabel, categorySlug){
     newsArray.forEach(function(item) {
         const card = newsTemplate.content.cloneNode(true);
 
         const link = card.querySelector('a');
-        link.href = `news-detail.html?id=${item.id}`;
+        link.href = `news-detail.html?id=${item.id}&cat=${categorySlug}`;
 
         const title = card.querySelector('h3');
         title.textContent = item.title;
@@ -30,9 +30,9 @@ function renderNews(newsArray, trackElement,tagLabel){
     });
 }
 
-renderNews(tournamentNews, tournament, "TURNUVA");
-renderNews(gameNews, games, "HABER");
-renderNews(campaignNews, campaign, "KAMPANYA");
+renderNews(tournamentNews, tournament, "TURNUVA", "turnuva");
+renderNews(gameNews, games, "HABER", "oyun");
+renderNews(campaignNews, campaign, "KAMPANYA", "kampanya");
 
 const buttons = document.querySelectorAll('.news-btn');
 const panels = document.querySelectorAll('.news-panel');
@@ -47,7 +47,6 @@ buttons.forEach(function(btn){
         panels.forEach(function(p){
             p.classList.remove('active');
         });
-        // burada "doğru paneli" bulup active eklememiz lazım - bir sonraki adım bu
         document.querySelector(`.news-panel[data-panel="${btn.dataset.tab}"]`).classList.add('active');
     });
 });
@@ -62,6 +61,6 @@ panels.forEach(function(panel){
     });
 
     rightArrow.addEventListener('click', function(){
-    track.scrollBy({ left: 300, behavior: 'smooth' });
+        track.scrollBy({ left: 300, behavior: 'smooth' });
     });
 });

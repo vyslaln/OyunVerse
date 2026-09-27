@@ -7,6 +7,9 @@ function renderProducts(productArray){
     productArray.forEach(function(item){
         const card = productTemplate.content.cloneNode(true);
 
+        const detailLink = card.querySelector('.product-detail-link');
+        detailLink.href = `product-detail.html?id=${item.id}`;
+
         const img = card.querySelector('img');
         img.src = item.image;
         img.alt = item.imageAlt;

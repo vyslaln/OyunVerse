@@ -60,3 +60,9 @@
     cursor: pointer;
     width: 100%;
 }
+
+.product-detail-link{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}

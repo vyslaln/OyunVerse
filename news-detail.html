@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Oyunverse — turnuva haberleri, oyun haberleri ve kampanyaları tek yerden takip et.">
-    <meta name="keywords" content="esports, gaming, oyun haberleri, turnuva haberleri, kampanya">
+    <meta name="description" content="Oyunverse — haber detayı.">
+    <meta name="keywords" content="esports, gaming, haber detayı, news detail">
     <meta name="author" content="Senin adın">
-    <meta name="robots" content="index,follow">
+    <meta name="robots" content="noindex,follow">
 
-    <meta property="og:title" content="Haberler | OyunVerse">
-    <meta property="og:description" content="Turnuva, oyun ve kampanya haberlerini tek yerden takip et.">
+    <meta property="og:title" content="Haber Detayı | OyunVerse">
+    <meta property="og:description" content="Turnuva, oyun ve kampanya haberlerinin detayları.">
     <meta property="og:image" content="assets/icons/header.jpg">
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="article">
     <meta property="og:locale" content="tr_TR">
 
     <meta name="theme-color" content="#0a0a12">
 
-    <link rel="canonical" href="news.html">
+    <link rel="canonical" href="news-detail.html">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,17 +31,13 @@
     <link rel="stylesheet" href="css/base/_variables.css">
     <link rel="stylesheet" href="css/layout/layout.css">
     <link rel="stylesheet" href="css/components/navbar.css">
-    <link rel="stylesheet" href="css/components/news-card.css">
     <link rel="stylesheet" href="css/components/buttons.css">
     <link rel="stylesheet" href="css/components/footer.css">
-    <link rel="stylesheet" href="css/components/product-card.css">
-    <link rel="stylesheet" href="css/components/tournament-card.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/pages/home.css">
-    <link rel="stylesheet" href="css/pages/news.css">
+    <link rel="stylesheet" href="css/pages/news-detail.css">
     <link rel="stylesheet" href="css/responsive.css">
 
-    <title>Haberler | Oyunverse</title>
+    <title>Haber Detayı | Oyunverse</title>
 </head>
 <body>
     <header id="header">
@@ -86,44 +82,21 @@
     </header>
 
     <main id="main" class="main">
-        <section class="news-page">
-            <h1 class="news-page-title">Haberler</h1>
+        <section class="news-detail">
 
-            <div class="news-tabs">
-                <button class="news-btn active" id="tournament-news-btn" data-tab="turnuva">
-                    Turnuva Haberleri
-                </button>
+            <a href="news.html" class="back-link">&larr; Haberlere Dön</a>
 
-                <button class="news-btn" id="game-news-btn" data-tab="oyun">
-                    Oyun Haberleri
-                </button>
-
-                <button class="news-btn" id="campain-news-btn" data-tab="kampanya">
-                    Kampanya
-                </button>
-            </div>
-
-            <div class="news-panels">
-                <template id="news-card-template">
-                    <div class="news-card">
-                        <a href=""><img src="" alt=""></a>
-                        <span class="badge-title"></span>
-                        <h3></h3>
-                        <p></p>
-                        <span class="date"></span>
-                    </div>
-                </template>
-
-                <div class="news-panel active" data-panel="turnuva">
-                    <div class="news-grid"></div>
+            <div class="news-detail-layout">
+                <div class="news-detail-media">
+                    <img id="detail-image" src="" alt="">
                 </div>
 
-                <div class="news-panel" data-panel="oyun">
-                    <div class="news-grid"></div>
-                </div>
+                <div class="news-detail-info">
+                    <span class="badge-title" id="detail-tag"></span>
+                    <h1 id="detail-title"></h1>
+                    <span class="date" id="detail-date"></span>
 
-                <div class="news-panel" data-panel="kampanya">
-                    <div class="news-grid"></div>
+                    <p id="detail-excerpt"></p>
                 </div>
             </div>
         </section>
@@ -170,6 +143,6 @@
 
     <script src="js/core/main.js"></script>
     <script src="js/data/newsData.js"></script>
-    <script src="js/pages/news.js"></script>
+    <script src="js/pages/news-detail.js"></script>
 </body>
 </html>

@@ -24,13 +24,9 @@ A demo esports & gaming platform — tournaments, gaming news, an equipment shop
 
 <div align="center">
 
-<video src="docs/demo.mp4" controls width="800">
-  Tarayıcın video etiketini desteklemiyor. / Your browser does not support the video tag.
-</video>
+<video src="https://github.com/user-attachments/assets/36bf675a-3107-4f41-bd22-75cb47ef95b5" controls muted width="800"></video>
 
 </div>
-
-> Not / Note: Video GitHub üzerinde `docs/demo.mp4` dosyası repoya push edildiğinde otomatik oynatılabilir hâle gelir. / The video above renders automatically on GitHub once `docs/demo.mp4` is committed to the repository.
 
 ---
 
@@ -106,30 +102,36 @@ Ardından `index.html`'i bir local server üzerinden aç (tarayıcı güvenlik p
 ```
 OyunVerse/
   index.html
-  tournaments.html
-  tournament-detail.html
-  news.html
-  news-detail.html
-  shop.html
-  product-detail.html
-  cart.html
-  checkout.html
-  plans.html
-  plan-checkout.html
   about.html
-  contact.html
-  login.html
-  register.html
   account.html
   account-edit.html
+  article.html
+  cart.html
+  checkout.html
+  contact.html
   dashboard.html
+  login.html
+  news.html
+  news-detail.html
+  plan-checkout.html
+  plans.html
+  product-detail.html
+  register.html
   search.html
+  shop.html
+  tournament-detail.html
+  tournaments.html
 
   docs/
-    demo.mp4
+    readme.md
 
   assets/
+    demo_video/
+      demo-video.mp4
     icons/
+      header.jpg
+      oyunverse-icon.svg
+      oyunverse-wordmark.svg
 
   css/
     base/
@@ -138,29 +140,62 @@ OyunVerse/
     layout/
       layout.css
     components/
-      navbar.css
       buttons.css
       footer.css
+      navbar.css
       news-card.css
+      payment-form.css
+      plan-card.css
       product-card.css
       tournament-card.css
-      plan-card.css
-      payment-form.css
     pages/
-      (her sayfaya ozel stil dosyalari)
-    style.css
+      about.css
+      account.css
+      auth.css
+      cart.css
+      checkout.css
+      contact.css
+      dashboard.css
+      home.css
+      news.css
+      news-detail.css
+      plan-checkout.css
+      plans.css
+      product-detail.css
+      search.css
+      shop.css
+      tournament-detail.css
+      tournaments.css
     responsive.css
+    style.css
 
   js/
     core/
       main.js
     data/
-      tournamentsData.js
       newsData.js
-      productsData.js
       plansData.js
+      productsData.js
+      tournamentsData.js
     pages/
-      (her sayfaya ozel js dosyalari)
+      account.js
+      account-edit.js
+      cart.js
+      checkout.js
+      contact.js
+      dashboard.js
+      home.js
+      login.js
+      news.js
+      news-detail.js
+      plan-checkout.js
+      plans.js
+      product-detail.js
+      register.js
+      search.js
+      shop.js
+      tournament-detail.js
+      tournaments.js
 ```
 
 ## Veri Modeli (localStorage)

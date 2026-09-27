@@ -8,14 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO -->
-    <meta name="description" content="Oyunverse — e-spor turnuvaları tek platformda. Aktif ve yaklaşan turnuvaları keşfet, katıl.">
-    <meta name="keywords" content="esports, gaming, tournaments, e-spor turnuvaları">
+    <meta name="description" content="Oyunverse — turnuva detayları, tarih, ödül havuzu ve katılımcı bilgileri.">
+    <meta name="keywords" content="esports, gaming, tournament detail, turnuva detayı">
     <meta name="author" content="Senin adın">
-    <meta name="robots" content="index,follow">
+    <meta name="robots" content="noindex,follow">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Turnuvalar | OyunVerse">
-    <meta property="og:description" content="Aktif ve yaklaşan e-spor turnuvalarını keşfet, katıl.">
+    <meta property="og:title" content="Turnuva Detayı | OyunVerse">
+    <meta property="og:description" content="Turnuva tarihi, ödül havuzu ve katılımcı bilgilerini incele.">
     <meta property="og:image" content="assets/icons/header.jpg">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="tr_TR">
@@ -24,7 +24,7 @@
     <meta name="theme-color" content="#0a0a12">
 
     <!-- Canonical Link (sayfanın "asıl" adresi) -->
-    <link rel="canonical" href="tournaments.html">
+    <link rel="canonical" href="tournament-detail.html">
 
     <!-- Fontlar -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,11 +47,11 @@
     <link rel="stylesheet" href="css/components/product-card.css">
     <link rel="stylesheet" href="css/components/tournament-card.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/pages/tournaments.css">
+    <link rel="stylesheet" href="css/pages/tournament-detail.css">
     <link rel="stylesheet" href="css/responsive.css">
 
     <!-- Title -->
-    <title>Turnuvalar | Oyunverse</title>
+    <title>Turnuva Detayı | Oyunverse</title>
 
 </head>
 <body>
@@ -104,32 +104,66 @@
     <!-- Main -->
     <main id="main" class="main">
 
-        <!-- Turnuvalar -->
-        <section class="tournaments-section">
-            <h1 class="tournaments-title">Turnuvalar</h1>
-            <p class="tournaments-subtitle">Aktif ve yaklaşan tüm e-spor turnuvalarını buradan takip edebilirsin.</p>
+        <!-- Turnuva Detay -->
+        <section class="tournament-detail">
 
-            <template id="tournament-card-template">
-                <div class="tournament-card">
-                    <a href="">
-                        <img src="" alt="">
-                    </a>
-                    <span class="tournament-game-tag"></span>
-                    <h3 class="tournament-name"></h3>
-                    <div class="tournament-meta">
-                        <span class="tournament-date"></span>
-                        <span class="tournament-prize"></span>
-                        <span class="tournament-participants"></span>
-                    </div>
-                    <a href="" class="cta-btn tournament-detail-btn">Detaylar</a>
+            <a href="tournaments.html" class="back-link">&larr; Turnuvalara Dön</a>
+
+            <div class="tournament-detail-layout">
+                <div class="tournament-detail-media">
+                    <img id="detail-image" src="" alt="">
                 </div>
-            </template>
 
-            <!-- Turnuva kartları JS ile buraya basılacak -->
-            <div class="tournament-grid" id="tournament-grid">
+                <div class="tournament-detail-info">
+                    <span class="tournament-game-tag" id="detail-game"></span>
+                    <h1 id="detail-name"></h1>
 
+                    <div class="tournament-detail-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Tarih</span>
+                            <span id="detail-date"></span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Ödül Havuzu</span>
+                            <span id="detail-prize"></span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Katılımcı</span>
+                            <span id="detail-participants"></span>
+                        </div>
+                    </div>
+
+                    <p id="detail-description"></p>
+
+                    <button class="cta-btn" id="open-register-modal">Turnuvaya Kayıt Ol</button>
+                </div>
             </div>
         </section>
+
+        <!-- Kayıt Formu Modal -->
+        <div class="modal-overlay" id="register-modal-overlay">
+            <div class="modal-box">
+                <button class="modal-close" id="close-register-modal">&times;</button>
+
+                <h2 class="modal-title">Turnuvaya Kayıt Ol</h2>
+                <p class="modal-subtitle" id="modal-tournament-name"></p>
+
+                <form id="register-form">
+                    <label for="register-fullname">Ad Soyad</label>
+                    <input type="text" id="register-fullname" required>
+
+                    <label for="register-email">E-posta</label>
+                    <input type="email" id="register-email" required>
+
+                    <label for="register-team">Takım Adı <span class="optional-label">(opsiyonel)</span></label>
+                    <input type="text" id="register-team">
+
+                    <button type="submit" class="cta-btn">Kaydı Tamamla</button>
+                </form>
+
+                <p class="modal-success" id="register-success">Kaydınız alındı! Bilgileriniz panele işlendi.</p>
+            </div>
+        </div>
 
     </main>
 
@@ -176,6 +210,6 @@
     <!-- Harici (external) js dosyaları  -->
     <script src="js/core/main.js"></script>
     <script src="js/data/tournamentsData.js"></script>
-    <script src="js/pages/tournaments.js"></script>
+    <script src="js/pages/tournament-detail.js"></script>
 </body>
 </html>

@@ -1,0 +1,186 @@
+/* Turnuva detay sayfasinin disaridan sinir/bosluk veren ana kapsayicisi */
+.tournament-detail{
+    max-width: 1600px;
+    margin-inline: auto;
+    margin-top: var(--spacing-xl);
+    padding-inline-start: 40px;
+    padding-inline-end: 15px;
+}
+
+.back-link{
+    display: inline-block;
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.back-link:hover{
+    color: var(--color-accent-cyan);
+}
+
+/* gorsel solda, bilgi sagda */
+.tournament-detail-layout{
+    display: flex;
+    align-items: stretch;
+    gap: var(--spacing-lg);
+}
+
+.tournament-detail-media{
+    flex: 1;
+}
+
+.tournament-detail-media img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+}
+
+.tournament-detail-info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: flex-start;
+}
+
+#detail-name{
+    font-family: var(--font-display);
+    color: var(--color-text);
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+/* tarih / odul / katilimci bilgilerini yan yana dizen kutular */
+.tournament-detail-meta{
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.meta-item{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.meta-label{
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.meta-item span:not(.meta-label){
+    color: var(--color-accent-cyan);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+#detail-description{
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ekranin tamamini kaplayan koyu arkaplan - modal acikken sayfanin ustune biner */
+.modal-overlay{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.modal-overlay.active{
+    display: flex;
+}
+
+.modal-box{
+    position: relative;
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    width: 100%;
+    max-width: 420px;
+}
+
+.modal-close{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-close:hover{
+    color: var(--color-accent-cyan);
+}
+
+.modal-title{
+    font-family: var(--font-display);
+    color: var(--color-text);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.modal-subtitle{
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    margin-top: 4px;
+    margin-bottom: var(--spacing-sm);
+}
+
+#register-form{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+#register-form label{
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+    margin-top: var(--spacing-xs);
+}
+
+.optional-label{
+    color: var(--color-text-muted);
+    font-weight: 400;
+}
+
+#register-form input{
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    color: var(--color-text);
+    font-size: 0.875rem;
+}
+
+#register-form input:focus{
+    outline: none;
+    border-color: var(--color-accent-violet);
+}
+
+#register-form button{
+    margin-top: var(--spacing-sm);
+    border: none;
+    cursor: pointer;
+}
+
+.modal-success{
+    display: none;
+    color: var(--color-accent-cyan);
+    font-size: 0.875rem;
+    margin-top: var(--spacing-sm);
+    text-align: center;
+}
+
+.modal-success.active{
+    display: block;
+}

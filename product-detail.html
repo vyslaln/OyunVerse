@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Oyunverse Mağaza — klavye, mouse, kulaklık, controller ve mouse pad gibi oyuncu ekipmanlarını keşfet.">
-    <meta name="keywords" content="oyuncu ekipmanları, gaming gear, klavye, mouse, kulaklık, controller, mouse pad">
+    <meta name="description" content="Oyunverse — ürün detayı, özellikler ve fiyat bilgisi.">
+    <meta name="keywords" content="oyuncu ekipmanları, gaming gear, ürün detay">
     <meta name="author" content="Senin adın">
-    <meta name="robots" content="index,follow">
+    <meta name="robots" content="noindex,follow">
 
-    <meta property="og:title" content="Mağaza | OyunVerse">
-    <meta property="og:description" content="Oyuncu ekipmanlarını keşfet: klavye, mouse, kulaklık, controller, mouse pad.">
+    <meta property="og:title" content="Ürün Detayı | OyunVerse">
+    <meta property="og:description" content="Ürün özelliklerini ve fiyat bilgisini incele.">
     <meta property="og:image" content="assets/icons/header.jpg">
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="product">
     <meta property="og:locale" content="tr_TR">
 
     <meta name="theme-color" content="#0a0a12">
 
-    <link rel="canonical" href="shop.html">
+    <link rel="canonical" href="product-detail.html">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,12 +33,11 @@
     <link rel="stylesheet" href="css/components/navbar.css">
     <link rel="stylesheet" href="css/components/buttons.css">
     <link rel="stylesheet" href="css/components/footer.css">
-    <link rel="stylesheet" href="css/components/product-card.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/pages/shop.css">
+    <link rel="stylesheet" href="css/pages/product-detail.css">
     <link rel="stylesheet" href="css/responsive.css">
 
-    <title>Mağaza | Oyunverse</title>
+    <title>Ürün Detayı | Oyunverse</title>
 </head>
 <body>
     <header id="header">
@@ -83,38 +82,41 @@
     </header>
 
     <main id="main" class="main">
-        <section class="shop-page">
-            <h1 class="shop-page-title">Mağaza</h1>
-            <p class="shop-page-subtitle">Performansını yükseltecek oyuncu ekipmanlarını keşfet.</p>
+        <section class="product-detail">
 
-            <div class="shop-tabs">
-                <button class="shop-tab-btn active" data-filter="tumu">Tümü</button>
-                <button class="shop-tab-btn" data-filter="klavye">Klavye</button>
-                <button class="shop-tab-btn" data-filter="mouse">Mouse</button>
-                <button class="shop-tab-btn" data-filter="kulaklik">Kulaklık</button>
-                <button class="shop-tab-btn" data-filter="controller">Controller</button>
-                <button class="shop-tab-btn" data-filter="mousepad">Mousepad</button>
+            <a href="shop.html" class="back-link">&larr; Mağazaya Dön</a>
+
+            <div class="product-detail-layout">
+                <div class="product-detail-media">
+                    <img id="detail-image" src="" alt="">
+                    <span class="product-badge" id="detail-badge"></span>
+                </div>
+
+                <div class="product-detail-info">
+                    <span class="product-category-tag" id="detail-category"></span>
+                    <h1 id="detail-name"></h1>
+                    <span class="detail-brand" id="detail-brand"></span>
+
+                    <div class="detail-price-row">
+                        <span class="detail-price" id="detail-price"></span>
+                        <span class="detail-old-price" id="detail-old-price"></span>
+                    </div>
+
+                    <p id="detail-description"></p>
+
+                    <div class="quantity-row">
+                        <label for="detail-quantity">Adet</label>
+                        <div class="quantity-control">
+                            <button type="button" class="quantity-btn" id="quantity-decrease">&minus;</button>
+                            <input type="number" id="detail-quantity" value="1" min="1">
+                            <button type="button" class="quantity-btn" id="quantity-increase">&plus;</button>
+                        </div>
+                    </div>
+
+                    <button class="cta-btn" id="add-to-cart-btn">Sepete Ekle</button>
+                    <p class="cart-success" id="cart-success">Ürün sepete eklendi!</p>
+                </div>
             </div>
-
-            <template id="product-card-template">
-    <div class="product-card">
-        <div class="product-image-wrap">
-            <a href="">
-                <img src="" alt="">
-            </a>
-            <span class="product-badge"></span>
-        </div>
-        <span class="product-category-tag"></span>
-        <h3 class="product-name"></h3>
-        <div class="product-price-row">
-            <span class="product-price"></span>
-            <span class="product-old-price"></span>
-        </div>
-        <button class="cta-btn product-add-btn">Sepete Ekle</button>
-    </div>
-</template>
-
-            <div class="product-grid" id="product-grid"></div>
         </section>
     </main>
 
@@ -159,6 +161,6 @@
 
     <script src="js/core/main.js"></script>
     <script src="js/data/productsData.js"></script>
-    <script src="js/pages/shop.js"></script>
+    <script src="js/pages/product-detail.js"></script>
 </body>
 </html>

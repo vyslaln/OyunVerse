@@ -78,3 +78,14 @@ if (authNavLink) {
         if (event.key === 'Escape') overlay.classList.remove('active');
     });
 })();
+
+// Mobil hamburger menu ac/kapa
+const menuToggleBtn = document.getElementById('menu-toggle');
+const navList = document.getElementById('nav-list');
+
+if (menuToggleBtn && navList) {
+    menuToggleBtn.addEventListener('click', function(){
+        navList.classList.toggle('active');
+        menuToggleBtn.classList.toggle('active');
+    });
+}

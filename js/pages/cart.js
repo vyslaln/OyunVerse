@@ -6,10 +6,12 @@ const summarySubtotal = document.getElementById('summary-subtotal');
 const summaryTotal = document.getElementById('summary-total');
 const checkoutBtn = document.getElementById('checkout-btn');
 
+// "2.499 TL" gibi bir metni 2499 sayisina ceviriyor
 function parsePrice(priceText){
     return Number(priceText.replace(/[^\d]/g, '')) || 0;
 }
 
+// 2499 sayisini "2.499 TL" formatina geri ceviriyor
 function formatPrice(amount){
     return amount.toLocaleString('tr-TR') + ' TL';
 }
@@ -25,6 +27,8 @@ function saveCart(cart){
 function renderCart(){
     const cart = getCart();
     cartItemsContainer.innerHTML = '';
+
+    // template elemani innerHTML = '' ile silindigi icin tekrar ekliyoruz
     cartItemsContainer.appendChild(cartItemTemplate);
 
     if (cart.length === 0) {
@@ -55,11 +59,13 @@ function renderCart(){
         const priceEl = row.querySelector('.cart-item-price');
         priceEl.textContent = cartItem.price;
 
+        const itemQuantity = cartItem.quantity || 1;
+
         const qtyValue = row.querySelector('.cart-item-qty-value');
-        qtyValue.textContent = cartItem.quantity;
+        qtyValue.textContent = itemQuantity;
 
         const unitPrice = parsePrice(cartItem.price);
-        const lineSubtotal = unitPrice * cartItem.quantity;
+        const lineSubtotal = unitPrice * itemQuantity;
         total += lineSubtotal;
 
         const subtotalEl = row.querySelector('.cart-item-subtotal');
@@ -68,8 +74,9 @@ function renderCart(){
         const decreaseBtn = row.querySelector('.cart-decrease');
         decreaseBtn.addEventListener('click', function(){
             const currentCart = getCart();
-            if (currentCart[index].quantity > 1) {
-                currentCart[index].quantity -= 1;
+            const currentQty = currentCart[index].quantity || 1;
+            if (currentQty > 1) {
+                currentCart[index].quantity = currentQty - 1;
                 saveCart(currentCart);
                 renderCart();
             }
@@ -78,7 +85,7 @@ function renderCart(){
         const increaseBtn = row.querySelector('.cart-increase');
         increaseBtn.addEventListener('click', function(){
             const currentCart = getCart();
-            currentCart[index].quantity += 1;
+            currentCart[index].quantity = (currentCart[index].quantity || 1) + 1;
             saveCart(currentCart);
             renderCart();
         });

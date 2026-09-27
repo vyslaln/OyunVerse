@@ -1,0 +1,234 @@
+/* ==========================================================
+   TABLET (max-width: 1024px)
+   ========================================================== */
+@media (max-width: 1024px){
+    .hero-top img{
+        width: 360px;
+    }
+
+    .hero-title{
+        font-size: 3rem;
+    }
+
+    .hero-card img{
+        width: 280px;
+    }
+
+    .featured-games-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product-grid,
+    .plan-grid,
+    .tournament-grid,
+    .news-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .account-grid,
+    .dashboard-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .account-card-wide,
+    .dashboard-card-wide{
+        grid-column: 1 / -1;
+    }
+
+    .stat-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .checkout-layout,
+    .cart-layout{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================
+   MOBIL (max-width: 768px)
+   ========================================================== */
+@media (max-width: 768px){
+
+    /* --- Navbar / Hamburger Menu --- */
+    .menu-toggle{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .menu-toggle span{
+        width: 24px;
+        height: 2px;
+        background-color: var(--color-text);
+        border-radius: 2px;
+    }
+
+    #navbar{
+        position: fixed;
+        inset: 88px 0 0 0;
+        background-color: var(--color-bg);
+        border-top: 1px solid var(--color-border);
+        transform: translateY(-10px);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        z-index: 1000;
+    }
+
+    .nav-list.active ~ #navbar,
+    #navbar:has(.nav-list.active){
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .nav-list{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: var(--spacing-lg) 40px;
+        display: none;
+    }
+
+    .nav-list.active{
+        display: flex;
+    }
+
+    .nav-list li{
+        width: 100%;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .nav-list a{
+        display: block;
+        padding: 16px 0;
+    }
+
+    .navbar-actions{
+        gap: 6px;
+    }
+
+    .btn-signin{
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    /* --- Hero --- */
+    .hero{
+        padding-inline: 20px;
+    }
+
+    .hero-top{
+        flex-direction: column;
+    }
+
+    .hero-top img{
+        width: 100%;
+        height: 220px;
+    }
+
+    .hero-title{
+        font-size: 2.25rem;
+    }
+
+    .hero-text1{
+        font-size: 1.125rem;
+    }
+
+    .hero-cards-row{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-card img{
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* --- Grid bazli tum sayfalar tek sutuna dusuyor --- */
+    .featured-games-grid,
+    .product-grid,
+    .plan-grid,
+    .tournament-grid,
+    .news-grid,
+    .stat-grid{
+        grid-template-columns: 1fr;
+    }
+
+    /* --- Haberler sekmeleri --- */
+    .news-tabs,
+    .shop-tabs{
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    /* --- Urun / turnuva / haber detay sayfalari --- */
+    .product-detail-layout,
+    .tournament-detail-layout{
+        grid-template-columns: 1fr;
+    }
+
+    /* --- Sepet / Odeme --- */
+    .cart-item{
+        flex-wrap: wrap;
+    }
+
+    .payment-form-row{
+        grid-template-columns: 1fr;
+    }
+
+    /* --- Hesap sayfalari --- */
+    .account-header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .account-header-actions{
+        margin-left: 0;
+        width: 100%;
+    }
+
+    /* --- Footer --- */
+    .footer-top{
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+
+    /* --- Sayfa ic bosluklari --- */
+    .account-page,
+    .dashboard-page,
+    .search-page,
+    .checkout-page,
+    .cart-page{
+        padding-inline: 20px;
+    }
+}
+
+/* ==========================================================
+   KUCUK MOBIL (max-width: 480px)
+   ========================================================== */
+@media (max-width: 480px){
+    .hero-title{
+        font-size: 1.75rem;
+    }
+
+    .hero-text1{
+        font-size: 1rem;
+    }
+
+    .stat-card{
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .search-overlay-box{
+        width: 92%;
+    }
+}

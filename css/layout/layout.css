@@ -1,0 +1,54 @@
+/* ==========================================================
+   Genel Sayfa Iskeleti
+   Amac: body'yi en az ekran yuksekligi kadar yapip, footer'i
+   icerik az olsa bile sayfanin en altina yapistirmak
+   ========================================================== */
+
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg);
+    overflow-x: hidden;
+}
+
+/* Header'in kendi dogal yuksekligini korumasi icin */
+#header{
+    flex-shrink: 0;
+}
+
+/* Ana icerik alani - kalan tum bosluğu kaplar, footer'i asagi iter */
+.main{
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+/* Footer her zaman en altta, icerik ne kadar az olursa olsun */
+.site-footer{
+    flex-shrink: 0;
+}
+
+/* ==========================================================
+   Genel Site Genisligi Kisitlamalari
+   Amac: cok genis ekranlarda satirlarin asiri uzamamasi
+   ========================================================== */
+
+#header,
+.footer-top,
+.footer-bottom{
+    max-width: 1600px;
+    margin-inline: auto;
+    width: 100%;
+}
+
+/* ==========================================================
+   Kaydirma Davranisi
+   ========================================================== */
+
+html{
+    scroll-behavior: smooth;
+}

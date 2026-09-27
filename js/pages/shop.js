@@ -7,9 +7,6 @@ function renderProducts(productArray){
     productArray.forEach(function(item){
         const card = productTemplate.content.cloneNode(true);
 
-        const link = card.querySelector('a');
-        link.href = `product-detail.html?id=${item.id}`;
-
         const img = card.querySelector('img');
         img.src = item.image;
         img.alt = item.imageAlt;
@@ -44,13 +41,16 @@ function addToCart(item){
         productId: item.id,
         name: item.name,
         price: item.price,
+        quantity: 1,
         addedAt: new Date().toISOString()
     });
     localStorage.setItem('oyunverseCart', JSON.stringify(cart));
 }
 
+// ilk yuklemede tum urunleri goster
 renderProducts(products);
 
+// kategori filtre butonlari
 const filterButtons = document.querySelectorAll('.shop-tab-btn');
 
 filterButtons.forEach(function(btn){
